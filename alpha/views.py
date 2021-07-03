@@ -16,7 +16,7 @@ class FetchExchangeRate(View):
         'from_currency':latest_rate_from_db.from_currency.code,
         'to_currency':latest_rate_from_db.to_currency.code,
         'exchange_rate':latest_rate_from_db.exchange_rate,
-        'fetched_timestamp':latest_rate_from_db.fetched
+        'fetched_timestamp(UTC)':latest_rate_from_db.fetched
         }
         response = {
         'success': True,
@@ -35,7 +35,7 @@ class FetchExchangeRate(View):
             'from_currency':latest_saved.from_currency.code,
             'to_currency':latest_saved.to_currency.code,
             'exchange_rate':latest_saved.exchange_rate,
-            'fetched_timestamp':latest_saved.fetched
+            'fetched_timestamp(UTC)':latest_saved.fetched
             }
             response = {
             'success': True,
